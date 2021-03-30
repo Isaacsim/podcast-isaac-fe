@@ -66,6 +66,7 @@ export const CreateAccount = () => {
   );
 
   const onSubmit = () => {
+    console.log(getValues());
     if (loading !== undefined) {
       const { email, password, role } = getValues();
       createAccountMutation({

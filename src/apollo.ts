@@ -34,12 +34,12 @@ export const client = new ApolloClient({
           isLoggedIn: {
             read() {
               //return Boolean(localStorage.getItem("token"));
-              return isLoggedInVar;
+              return isLoggedInVar();
             },
           },
           token: {
             read() {
-              return authTokenVar;
+              return authTokenVar();
             },
           },
         },
